@@ -1,0 +1,19 @@
+<h1>Show Account......</h1>
+
+<table class="table table-striped table table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>Account ID</th>
+        <th>AccountHolder Name</th>
+        <th>MobileNO</th>
+        <th>Balance</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let data of acc">
+        <td>{{data.id}}</td>
+        <td>{{data.phone}}</td>
+        <td>{{data.accountHolder}}</td>
+        <td>{{data.balance}}</td>
+
+    </tr>
+</table>

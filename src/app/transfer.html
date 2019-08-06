@@ -1,0 +1,23 @@
+<h1>Transfer Amount</h1>
+<form #empForm=ngForm >
+        <table class="table table-striped table table-hover">
+            <tr>
+                <td>Account 1 Id</td>
+                <td><input type="number" name="id" id="id" [(ngModel)]="model.id1" #idcontrol="ngModel" required/></td>
+                <span *ngIf="idcontrol.touched && idcontrol.invalid">ID should be filled</span>
+            </tr>
+            <tr>
+                    <td>Account 2 Id</td>
+                    <td><input type="number" name="id" id="id" [(ngModel)]="model.id2" #idcontrol="ngModel" required/></td>
+                    <span *ngIf="idcontrol.touched && idcontrol.invalid">ID should be filled</span>
+                </tr>
+            <tr>
+                    <td>Amount</td>
+                    <td><input type="number" id="balance" name="balance" [(ngModel)]="model.amount" #deptcontrol="ngModel" required/></td>
+                    <span *ngIf="deptcontrol.touched && deptcontrol.invalid">Amount should be filled</span>
+                </tr>
+                <tr>
+                        <input type="submit" value="Transfer" (click)="transfer()" [disabled]="empForm.invalid"/>
+                    </tr>
+        </table>
+</form>
